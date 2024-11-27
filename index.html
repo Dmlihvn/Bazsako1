@@ -1,0 +1,1445 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minimal Webpage with Shopping</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace; /* Changed to typewriter font */
+        }
+
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: none; /* Removed background image */
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            height: auto; /* Adjusted for content */
+        }
+
+        .hero h1 {
+            font-size: 2em;
+            color: #000; /* Set title color to black */
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            position: relative;
+            opacity: 0;
+            animation: slideInFromRight 1s forwards;
+        }
+
+        /* Slide-in animation */
+        @keyframes slideInFromRight {
+            0% {
+                transform: translateX(100%); /* Start off-screen */
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0); /* End at normal position */
+                opacity: 1;
+            }
+        }
+
+        .hero img {
+            width: 100%; /* Makes the second image responsive */
+            max-width: 100%; /* Ensures the image is responsive */
+            margin-top: 20px; /* Adds space between the first and second image */
+            display: block;
+            height: auto;
+        }
+
+        /* Product Section */
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px;
+            width: calc(25% - 40px);
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product h3 {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        .product p {
+            font-size: 1.2em;
+            color: #777;
+            margin-top: 10px;
+        }
+
+        .product .price {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .product button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        .product button:hover {
+            background-color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .product {
+                width: calc(50% - 40px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showPage('home')">Home</a></li>
+                <li><a href="#cart" onclick="showPage('cart')">Cart</a></li> <!-- Added Cart Link -->
+                <li><a href="#about" onclick="showPage('about')">About</a></li>
+                <li><a href="#contact" onclick="showPage('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+<img9C2BED12-4438-48AA-BC1B-C6C450E289B8.jpeg <section id="home" class="hero">
+        <h1>B  A  Z  S  A  K  Ø</h1>
+        <p> Clothing & Accesories </p>
+        <img src="5C361D0B-FAA2-4A09-A1CA-B2D4E95BC119.jpeg" alt="Second Image">
+    </section>
+
+    <!-- Cart Section (Placeholder) -->
+    <section id="cart" style="display: none;">
+        <h1>Your Cart</h1>
+        <p>Your shopping cart is empty.</p> <!-- Modify this with actual cart contents when needed -->
+    </section>
+
+    <!-- Product Section -->
+    <section id="products" class="products">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="78D0FE39-3BD2-45A8-ACD1-228AC8B04B10.gif" alt="Product 1">
+            <h3>HARD LEATHER JACKET</h3>
+            <p>Farzan xBazsako High quality and affordable price.</p>
+            <div class="price">$29,000.99</div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="A3276D3F-13FB-4DF6-A0C8-28E6B7ADC130.png" 9C2BED12-4438-48AA-BC1B-C6C450E289B8.jpegalt="Product 2">
+            <h3>LEATHER JACKET</h3>
+            <p>Description of product 2. Durable and stylish.</p>
+            <div class="price">$49.99</div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="F2DAE0F8-3917-4DF8-85F9-D881352EB700.png" alt="Product 3">
+            <h3>Trainers </h3>
+            <p>Description of product 3. Best for everyday use.</p>
+            <div class="price">$19,000.99</div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="F2DAE0F8-3917-4DF8-85F9-D881352EB700.png" alt="Product 4">
+            <h3>Product 4</h3>
+            <p>Description of product 4. Affordable and reliable.</p>
+            <div class="price">$39.99</div>
+            <button>Add to Cart</button>
+        </div>
+    </section>
+
+    <section id="about" style="display: none;" class="about">
+        <h1>About</h1>
+        <p>We are a team of creative individuals focused on delivering simple yet elegant web solutions. Our approach is clean, minimal, and user-centered.</p>
+    </section>
+
+    <section id="contact" style="display: none;" class="contact">
+        <h1>Get in Touch</h1>
+        <p>Feel free to reach out to us with any questions or inquiries.</p>
+        <form action="mailto:bazsako@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea><br>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>
+
+    <script>
+        function showPage(pageId) {
+            var pages = document.querySelectorAll('section');
+            pages.forEach(function(page) {
+                page.style.display = 'none';
+            });
+
+            var activePage = document.getElementById(pageId);
+            if (activePage) {
+                activePage.style.display = 'block';
+            }
+        }
+
+        // Default to Home page
+        showPage('home');
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minimal Webpage with Shopping</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace; /* Typewriter font */
+        }
+
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            position: relative;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Cart Button */
+        .cart-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #fff;
+            color: #333;
+            padding: 10px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5em;
+        }
+
+        /* Scrolling Marquee */
+        .marquee {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            font-size: 1.2em;
+            padding: 10px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .marquee span {
+            display: inline-block;
+            animation: marqueeAnimation 10s linear infinite;
+        }
+
+        @keyframes marqueeAnimation {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: none;
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            height: auto;
+        }
+
+        .hero h1 {
+            font-size: 2em;
+            color: #000;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            position: relative;
+            opacity: 0;
+            animation: slideInFromRight 1s forwards;
+        }
+
+        @keyframes slideInFromRight {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .hero img {
+            width: 100%;
+            max-width: 100%;
+            margin-top: 20px;
+            display: block;
+            height: auto;
+        }
+
+        /* Product Section */
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px;
+            width: calc(25% - 40px);
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product h3 {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        .product p {
+            font-size: 1.2em;
+            color: #777;
+            margin-top: 10px;
+        }
+
+        .product .price {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .product button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        .product button:hover {
+            background-color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .product {
+                width: calc(50% - 40px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product {
+                width: 100%;
+            }
+        }
+
+
+    <!-- Product Section -->
+    <section id="products" class="products">
+        <!-- Product 1 -->
+        <div class="HARD LEATHER JACKET">
+            <img src="6D7BFF5E-6AA2-45D4-A6E3-D7D52ECC6927.png" alt="Leather Jacket">
+            <h3>LEATHER JACKET</h3>
+            <p>Farzan X Bazsako</p>
+            <div class="price">$29,000.99</div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="MOTORCYCLE JACKET">
+            <img src="A3276D3F-13FB-4DF6-A0C8-28E6B7ADC130.png" alt="Black Leather Jacket">
+            <h3>BLACK LEATHER JACKET</h3>
+            <p>N.B.V x Bazsako - Durable and stylish.</p>
+            <div class="price">$49,000.99</div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="A3276D3F-13FB-4DF6-A0C8-28E6B7ADC130.png" alt="Black Leather Jacket">
+            <h3>BLACK LEATHER JACKET</h3>
+            <p>N.B.V x Bazsako - Durable and stylish.</p>
+            <div class="price">$49,000.99</div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="A8B2A3AE-EDA7-4BE4-83B0-707C50288945.png" alt="Jumpsuit">
+            <h3>NBV X BAZSAKO</h3>
+            <p>Jumpsuit Wear3 - Best for everyday use.</p>
+            <div class="price">$1,999.99</div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="F2DAE0F8-3917-4DF8-85F9-D881352EB700.png" alt="Product 5">
+            <h3>Product 5</h3>
+            <p>Description of product 5 - Affordable and reliable.</p>
+            <div class="price">$399.00</div>
+            <button>Add to Cart</button>
+        </div>
+    </section>
+
+    <section id="about" style="display: none;" class="about">
+        <h1>About Our Company</h1>
+        <p>We are a passionate team creating products that meet modern needs. Our goal is to provide easy-to-use experiences for our customers.</p>
+    </section>
+
+    <section id="contact" style="display: none;" class="contact">
+        <h1>Contact Us</h1>
+        <p>Have any questions? Feel free to reach out to us!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Bazsako. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            var pages = document.querySelectorAll('section');
+            pages.forEach(function(page) {
+                page.style.display = 'none';
+            });
+
+            var activePage = document.getElementById(pageId);
+            if (activePage) {
+                activePage.style.display = 'block';
+            }
+        }
+
+        // Default page view
+        showPage('home');
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minimal Webpage with Shopping</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace; /* Changed to typewriter font */
+        }
+
+        body {
+            background-color: #f8f8f8;
+            
+background-image: url('F2DAE0F8-3917-4DF8-85F9-D881352EB700.png');color: #333;
+            line-height: 1.6;
+ background-image: url('F2DAE0F8-3917-4DF8-85F9-D881352EB700.png');       }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: none; /* Removed background image */
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            height: auto; /* Adjusted for content */
+        }
+
+        .hero h1 {
+            font-size: 2em;
+            color: #000; /* Set title color to black */
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            position: relative;
+            opacity: 0;
+            animation: slideInFromRight 1s forwards;
+        }
+
+        /* Slide-in animation */
+        @keyframes slideInFromRight {
+            0% {
+                transform: translateX(100%); /* Start off-screen */
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0); /* End at normal position */
+                opacity: 1;
+            }
+        }
+
+        .hero img {
+            width: 100%; /* Makes the second image responsive */
+            max-width: 100%; /* Ensures the image is responsive */
+            margin-top: 20px; /* Adds space between the first and second image */
+            display: block;
+            height: auto;
+        }
+
+        /* About Section */
+        .about {
+            padding: 40px 20px;
+            text-align: center;
+            background: none; /* Removed background */
+        }
+
+        .about h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 40px 20px;
+            text-align: center;
+            background: none; /* Removed background */
+        }
+
+        .contact h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .contact form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact button:hover {
+            background-color: #555;
+        }
+
+        /* Product Section */
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px;
+            width: calc(25% - 40px);
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product h3 {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        .product p {
+            font-size: 1.2em;
+            color: #777;
+            margin-top: 10px;
+        }
+
+        .product .price {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .product button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        .product button:hover {
+            background-color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .product {
+                width: calc(50% - 40px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product {
+                width: 100%;
+            }
+        }
+
+
+    <!-- Product Section -->
+    <section id="products" class="products">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="6D7BFF5E-6AA2-45D4-A6E3-D7D52ECC6927.png" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>Description of product 1. High quality and affordable price.</p>
+            <div class="price">$29.99</div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="9C2BED12-4438-48AA-BC1B-C6C450E289B8.jpeg" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>Description of product 2. Durable and stylish.</p>
+            <div class="price">$49.99</div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <F2DAE0F8-3917-4DF8-85F9-D881352EB700.png img src="product3.jpg" alt="Product 3">
+            <h3>Product 3</h3>
+            <p>Description of product 3. Best for everyday use.</p>
+            <div class="price">$19.99</div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="F2DAE0F8-3917-4DF8-85F9-D881352EB700.png" alt="Product 4">
+            <h3>Product 4</h3>
+            <p>Description of product 4. Affordable and reliable.</p>
+            <div class="price">$39.99</div>
+            <button>Add to Cart</button>
+        </div>
+    </section>
+
+    <section id="about" style="display: none;" class="about">
+        <h1>About Our Company</h1>
+        <p>We are a team of creative individuals focused on delivering simple yet elegant web solutions. Our approach is clean, minimal, and user-centered.</p>
+    </section>
+
+    <section id="contact" style="display: none;" class="contact">
+        <h1>Get in Touch</h1>
+        <p>Feel free to reach out to us with any questions or inquiries.</p>
+        <form action="mailto:example@example.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="message">Message:</
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minimal Webpage with Shopping</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace; /* Typewriter font */
+        }
+
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            position: relative;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Cart Button */
+        .cart-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #fff;
+            color: #333;
+            padding: 10px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5em;
+        }
+
+        /* Scrolling Marquee */
+        .marquee {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            font-size: 1.2em;
+            padding: 10px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .marquee span {
+            display: inline-block;
+            animation: marqueeAnimation 10s linear infinite;
+        }
+
+        @keyframes marqueeAnimation {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: none;
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            height: auto;
+        }
+
+        .hero h1 {
+            font-size: 2em;
+            color: #000;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            position: relative;
+            opacity: 0;
+            animation: slideInFromRight 1s forwards;
+        }
+
+        @keyframes slideInFromRight {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .hero img {
+            width: 100%;
+            max-width: 100%;
+            margin-top: 20px;
+            display: block;
+            height: auto;
+        }
+
+        /* Product Section */
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px;
+            width: calc(25% - 40px);
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product h3 {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        .product p {
+            font-size: 1.2em;
+            color: #777;
+            margin-top: 10px;
+        }
+
+        .product .price {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .product button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        .product button:hover {
+            background-color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .product {
+                width: calc(50% - 40px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product {
+                width: 100%;
+            }
+        }
+
+
+    <!-- Product Section -->
+    <section id="products" class="products">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="6D7BFF5E-6AA2-45D4-A6E3-D7D52ECC6927.png" alt="Leather Jacket">
+            <h3>LEATHER JACKET</h3>
+            <p>Farzan X Bazsako</p>
+            <div class="price">$29,000.99</div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="A3276D3F-13FB-4DF6-A0C8-28E6B7ADC130.png" alt="Black Leather Jacket">
+            <h3>BLACK LEATHER JACKET</h3>
+            <p>N.B.V x Bazsako - Durable and stylish.</p>
+            <div class="price">$49,000.99</div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="A3276D3F-13FB-4DF6-A0C8-28E6B7ADC130.png" alt="Black Leather Jacket">
+            <h3>BLACK LEATHER JACKET</h3>
+            <p>N.B.V x Bazsako - Durable and stylish.</p>
+            <div class="price">$49,000.99</div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="A8B2A3AE-EDA7-4BE4-83B0-707C50288945.png" alt="Jumpsuit">
+            <h3>NBV X BAZSAKO</h3>
+            <p>Jumpsuit Wear3 - Best for everyday use.</p>
+            <div class="price">$1,999.99</div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="F2DAE0F8-3917-4DF8-85F9-D881352EB700.png" alt="Product 5">
+            <h3>Product 5</h3>
+            <p>Description of product 5 - Affordable and reliable.</p>
+            <div class="price">$399.00</div>
+            <button>Add to Cart</button>
+        </div>
+    </section>
+
+    <section id="about" style="display: none;" class="about">
+        <h1>About Our Company</h1>
+        <p>We are a passionate team creating products that meet modern needs. Our goal is to provide easy-to-use experiences for our customers.</p>
+    </section>
+
+    <section id="contact" style="display: none;" class="contact">
+        <h1>Contact Us</h1>
+        <p>Have any questions? Feel free to reach out to us!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Bazsako. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            var pages = document.querySelectorAll('section');
+            pages.forEach(function(page) {
+                page.style.display = 'none';
+            });
+
+            var activePage = document.getElementById(pageId);
+            if (activePage) {
+                activePage.style.display = 'block';
+            }
+        }
+
+        // Default page view
+        showPage('home');
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minimal Webpage with Shopping</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace; /* Changed to typewriter font */
+        }
+
+        body {
+            background-color: #f8f8f8;
+            
+background-image: url('F2DAE0F8-3917-4DF8-85F9-D881352EB700.png');color: #333;
+            line-height: 1.6;
+ background-image: url('F2DAE0F8-3917-4DF8-85F9-D881352EB700.png');       }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: none; /* Removed background image */
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            height: auto; /* Adjusted for content */
+        }
+
+        .hero h1 {
+            font-size: 2em;
+            color: #000; /* Set title color to black */
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            position: relative;
+            opacity: 0;
+            animation: slideInFromRight 1s forwards;
+        }
+
+        /* Slide-in animation */
+        @keyframes slideInFromRight {
+            0% {
+                transform: translateX(100%); /* Start off-screen */
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0); /* End at normal position */
+                opacity: 1;
+            }
+        }
+
+        .hero img {
+            width: 100%; /* Makes the second image responsive */
+            max-width: 100%; /* Ensures the image is responsive */
+            margin-top: 20px; /* Adds space between the first and second image */
+            display: block;
+            height: auto;
+        }
+
+        /* About Section */
+        .about {
+            padding: 40px 20px;
+            text-align: center;
+            background: none; /* Removed background */
+        }
+
+        .about h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 40px 20px;
+            text-align: center;
+            background: none; /* Removed background */
+        }
+
+        .contact h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .contact form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact button:hover {
+            background-color: #555;
+        }
+
+        /* Product Section */
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px;
+            width: calc(25% - 40px);
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product h3 {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        .product p {
+            font-size: 1.2em;
+            color: #777;
+            margin-top: 10px;
+        }
+
+        .product .price {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .product button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        .product button:hover {
+            background-color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .product {
+                width: calc(50% - 40px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showPage('home')">Home</a></li>
+                <li><a href="#about" onclick="showPage('about')">About</a></li>
+                <li><a href="#contact" onclick="showPage('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>B  A  Z  S  A  K  Ø </h1>
+        <p>Clean design. Simple experience. Responsive layout.</p>
+        <img src="917F891D-2A7C-49AC-9EEB-47B5E0597E1B.jpeg" alt="Second Image">
+    </section>
+
+    <!-- Product Section -->
+    <section id="products" class="products">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="6D7BFF5E-6AA2-45D4-A6E3-D7D52ECC6927.png" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>Description of product 1. High quality and affordable price.</p>
+            <div class="price">$29.99</div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="A3276D3F-13FB-4DF6-A0C8-28E6B7ADC130.png" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>Description of product 2. Durable and stylish.</p>
+            <div class="price">$49.99</div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <F2DAE0F8-3917-4DF8-85F9-D881352EB700.png img src="product3.jpg" alt="Product 3">
+            <h3>Product 3</h3>
+            <p>Description of product 3. Best for everyday use.</p>
+            <div class="price">$19.99</div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="F2DAE0F8-3917-4DF8-85F9-D881352EB700.png" alt="Product 4">
+            <h3>Product 4</h3>
+            <p>Description of product 4. Affordable and reliable.</p>
+            <div class="price">$39.99</div>
+            <button>Add to Cart</button>
+        </div>
+    </section>
+
+    <section id="about" style="display: none;" class="about">
+        <h1>About Our Company</h1>
+        <p>We are a team of creative individuals focused on delivering simple yet elegant web solutions. Our approach is clean, minimal, and user-centered.</p>
+    </section>
+
+    <section id="contact" style="display: none;" class="contact">
+        <h1>Get in Touch</h1>
+        <p>Feel free to reach out to us with any questions or inquiries.</p>
+        <form action="mailto:example@example.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="message">Message:</
